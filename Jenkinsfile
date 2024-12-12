@@ -9,6 +9,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t myimage:12122024 .'
+                sh 'docker tag myimage:12122024 nikunj8421/myimage:12122024'
             }
         }
         stage('Push Docker Image') {
