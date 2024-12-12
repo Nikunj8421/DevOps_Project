@@ -14,6 +14,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 sh 'docker login -u nikunj8421 -p Nikunj@8421'
+                sh 'docker images'
                 sh 'docker push nikunj8421/myimage:12122024'
             }
         }
